@@ -1,0 +1,380 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="description" content="FL248 Unit 3 – Accommodation, Hotel Service & Customer Complaint Vocabulary Practice"/><title>FL248 | Unit 3 – Accommodation | Hotel Service Vocabulary Practice</title><style>
+    :root{
+      --ctu-blue:#0d4f8b;
+      --ctu-blue-2:#1676b8;
+      --ink:#17324a;
+      --muted:#5f7485;
+      --paper:#ffffff;
+      --bg:#f4f8fb;
+      --line:#d9e5ee;
+      --soft:#eaf3f9;
+      --success:#1f7a45;
+      --success-bg:#e9f7ef;
+      --warning:#8a5a00;
+      --shadow:0 10px 30px rgba(22,66,99,.09);
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      color:var(--ink);
+      background:linear-gradient(180deg,#eef6fb 0,#f8fbfd 280px,#f4f8fb 100%);
+      line-height:1.58;
+    }
+    a{color:inherit}
+    .hero{
+      background:linear-gradient(135deg,var(--ctu-blue) 0%,var(--ctu-blue-2) 100%);
+      color:white;
+      padding:26px 20px 34px;
+      box-shadow:0 5px 24px rgba(0,58,105,.2);
+    }
+    .hero-inner{
+      max-width:1180px;
+      margin:auto;
+      display:grid;
+      grid-template-columns:auto 1fr;
+      gap:20px;
+      align-items:center
+    }
+    .mark{
+      width:86px;
+      height:86px;
+      border-radius:50%;
+      background:#fff;
+      color:var(--ctu-blue);
+      display:grid;
+      place-items:center;
+      border:5px solid rgba(255,255,255,.35);
+      box-shadow:0 8px 22px rgba(0,0,0,.16);
+      font-weight:900;
+      font-size:28px;
+      letter-spacing:-1px;
+    }
+    .hero small{
+      display:block;
+      text-transform:uppercase;
+      letter-spacing:.16em;
+      font-weight:700;
+      opacity:.85;
+      margin-bottom:6px
+    }
+    .hero h1{
+      margin:0;
+      font-size:clamp(1.65rem,3vw,2.7rem);
+      line-height:1.15
+    }
+    .hero p{
+      margin:10px 0 0;
+      max-width:850px;
+      opacity:.94;
+      font-size:1.02rem
+    }
+    .nav-wrap{
+      position:sticky;
+      top:0;
+      z-index:20;
+      background:rgba(255,255,255,.96);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid var(--line)
+    }
+    nav{
+      max-width:1180px;
+      margin:auto;
+      padding:10px 18px;
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap
+    }
+    nav a{
+      text-decoration:none;
+      padding:8px 12px;
+      border-radius:999px;
+      font-weight:700;
+      font-size:.92rem;
+      color:var(--ctu-blue)
+    }
+    nav a:hover{background:var(--soft)}
+    .container{
+      max-width:1180px;
+      margin:26px auto 70px;
+      padding:0 18px
+    }
+    .notice{
+      background:#fff9e8;
+      border:1px solid #f1d88f;
+      border-left:5px solid #d7a92d;
+      padding:14px 16px;
+      border-radius:12px;
+      margin-bottom:22px;
+      color:#5c4a16
+    }
+    .section{
+      background:var(--paper);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:24px;
+      margin:22px 0;
+      scroll-margin-top:90px;
+    }
+    .section-head{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:18px;
+      margin-bottom:16px
+    }
+    .eyebrow{
+      font-size:.78rem;
+      text-transform:uppercase;
+      letter-spacing:.13em;
+      color:var(--ctu-blue);
+      font-weight:800
+    }
+    h2{
+      margin:.25rem 0 .25rem;
+      font-size:clamp(1.35rem,2.3vw,2rem);
+      line-height:1.2
+    }
+    .lead{margin:.25rem 0 0;color:var(--muted)}
+    .score-badge{
+      white-space:nowrap;
+      background:var(--soft);
+      color:var(--ctu-blue);
+      font-weight:800;
+      padding:8px 12px;
+      border-radius:999px
+    }
+    .grid-2{
+      display:grid;
+      grid-template-columns:1fr 1.3fr;
+      gap:18px
+    }
+    .panel{
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:16px;
+      background:#fbfdff
+    }
+    .panel h3{margin-top:0;color:var(--ctu-blue)}
+    .matching-list,.question-list{display:grid;gap:12px}
+    .qrow{
+      border:1px solid var(--line);
+      border-radius:13px;
+      padding:14px;
+      background:white;
+      transition:.18s
+    }
+    .qrow.correct{
+      border-color:#8fd0a9;
+      background:var(--success-bg);
+      box-shadow:inset 4px 0 0 var(--success)
+    }
+    .qtop{
+      display:grid;
+      grid-template-columns:auto 1fr;
+      gap:10px;
+      align-items:start
+    }
+    .num{
+      width:30px;
+      height:30px;
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      background:var(--soft);
+      color:var(--ctu-blue);
+      font-weight:900;
+      flex:0 0 auto
+    }
+    .correct .num{background:var(--success);color:white}
+    .tick{
+      display:none;
+      color:var(--success);
+      font-weight:900;
+      margin-left:8px
+    }
+    .correct .tick{display:inline}
+    select,input[type="text"]{
+      width:100%;
+      margin-top:9px;
+      padding:11px 12px;
+      border:1px solid #b9ccda;
+      border-radius:10px;
+      background:white;
+      color:var(--ink);
+      font:inherit;
+      outline:none
+    }
+    select:focus,input[type="text"]:focus{
+      border-color:var(--ctu-blue-2);
+      box-shadow:0 0 0 3px rgba(22,118,184,.12)
+    }
+    .meanings{
+      margin:0;
+      padding-left:22px;
+      display:grid;
+      gap:8px
+    }
+    .meanings li::marker{
+      font-weight:900;
+      color:var(--ctu-blue)
+    }
+    .word-bank{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin:12px 0 18px
+    }
+    .chip{
+      background:var(--soft);
+      border:1px solid #cfe3ef;
+      padding:6px 9px;
+      border-radius:999px;
+      font-size:.92rem
+    }
+    .mcq-options{
+      display:grid;
+      gap:8px;
+      margin-top:10px
+    }
+    .choice{
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
+      border:1px solid var(--line);
+      border-radius:10px;
+      padding:9px 10px;
+      cursor:pointer;
+      background:#fff
+    }
+    .choice:hover{background:#f8fbfd}
+    .choice input{margin-top:3px}
+    .correct-choice{
+      border-color:#8fd0a9!important;
+      background:var(--success-bg)!important;
+      color:#155c33;
+      font-weight:700
+    }
+    .controls{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:18px;
+      align-items:center
+    }
+    button{
+      appearance:none;
+      border:0;
+      border-radius:11px;
+      padding:11px 16px;
+      font:inherit;
+      font-weight:800;
+      cursor:pointer;
+      transition:.16s
+    }
+    .primary{
+      background:var(--ctu-blue);
+      color:white;
+      box-shadow:0 5px 14px rgba(13,79,139,.22)
+    }
+    .primary:hover{
+      background:#0a426f;
+      transform:translateY(-1px)
+    }
+    .secondary{
+      background:#eef4f8;
+      color:var(--ctu-blue);
+      border:1px solid #cedde7
+    }
+    .secondary:hover{background:#e4eef5}
+    .feedback{
+      font-weight:800;
+      color:var(--success);
+      min-height:1.6em
+    }
+    .overall{
+      display:grid;
+      grid-template-columns:1fr auto;
+      gap:20px;
+      align-items:center;
+      background:linear-gradient(135deg,#103f69,#176ca4);
+      color:#fff;
+      border-radius:18px;
+      padding:20px 22px;
+      margin:24px 0;
+      box-shadow:var(--shadow)
+    }
+    .overall h3{margin:0 0 4px}
+    .overall-score{
+      font-size:1.35rem;
+      font-weight:900;
+      background:rgba(255,255,255,.16);
+      padding:10px 14px;
+      border-radius:12px;
+      white-space:nowrap
+    }
+    footer{
+      text-align:center;
+      color:var(--muted);
+      padding:24px 18px 40px;
+      font-size:.92rem
+    }
+    .top-link{
+      position:fixed;
+      right:18px;
+      bottom:18px;
+      width:44px;
+      height:44px;
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      background:var(--ctu-blue);
+      color:white;
+      text-decoration:none;
+      box-shadow:0 7px 20px rgba(0,0,0,.18);
+      font-weight:900
+    }
+    @media(max-width:820px){
+      .hero-inner{grid-template-columns:1fr;text-align:center}
+      .mark{margin:auto}
+      .hero p{margin-left:auto;margin-right:auto}
+      .grid-2{grid-template-columns:1fr}
+      .section{padding:18px}
+      .section-head{display:block}
+      .score-badge{display:inline-block;margin-top:10px}
+      .overall{grid-template-columns:1fr}
+    }
+    @media print{
+      .nav-wrap,.controls,.top-link,.notice,.overall{display:none!important}
+      .section{box-shadow:none;break-inside:avoid}
+      .hero{background:white!important;color:black!important;border-bottom:2px solid #000}
+      .mark{border:2px solid #000}
+    }
+  </style></head><body id="top">
+<header class="hero"><div class="hero-inner"><div class="mark" aria-label="Can Tho University">CTU</div><div><small>Can Tho University · FL248 English for Tourism</small><h1>Unit 3 – Accommodation</h1><p>Accommodation, Hotel Service &amp; Customer Complaint Vocabulary Practice</p></div></div></header>
+<div class="nav-wrap"><nav aria-label="Exercise navigation"><a href="#exercise1">1. Matching</a><a href="#exercise2">2. Fill in the blanks</a><a href="#exercise3">3. Replace the phrases</a><a href="#exercise4">4. Multiple choice</a></nav></div>
+<main class="container"><div class="notice"><strong>How checking works:</strong> when you click <em>Check correct answers</em>, only correct responses are highlighted in green with a ✓. Incorrect or unfinished responses remain unmarked, so students can keep trying without seeing the answer.</div><div class="overall" aria-live="polite"><div><h3>Progress</h3><div>Each exercise contains 15 items. Re-check after making corrections.</div></div><div class="overall-score" id="overallScore">0 / 60 correct</div></div>
+<section class="section" id="exercise1"><div class="section-head"><div><div class="eyebrow">Exercise 1</div><h2>Match vocabulary items with their meanings</h2><p class="lead">Choose the correct letter A–O for each vocabulary item.</p></div><div class="score-badge" id="score1">0 / 15 correct</div></div><div class="grid-2"><div class="panel"><h3>Vocabulary items</h3><div class="matching-list" id="matchingList"></div></div><div class="panel"><h3>Meanings</h3><ol class="meanings" type="A" id="meanings"></ol></div></div><div class="controls"><button class="primary" onclick="checkMatching()">Check correct answers</button><button class="secondary" onclick="resetExercise(1)">Reset</button><span class="feedback" id="feedback1"></span></div></section>
+<section class="section" id="exercise2"><div class="section-head"><div><div class="eyebrow">Exercise 2</div><h2>Fill in the blanks</h2><p class="lead">Complete each sentence with the most suitable item from the word bank. Use each item once.</p></div><div class="score-badge" id="score2">0 / 15 correct</div></div><div class="word-bank" id="wordBank"></div><div class="question-list" id="fillList"></div><div class="controls"><button class="primary" onclick="checkFill()">Check correct answers</button><button class="secondary" onclick="resetExercise(2)">Reset</button><span class="feedback" id="feedback2"></span></div></section>
+<section class="section" id="exercise3"><div class="section-head"><div><div class="eyebrow">Exercise 3</div><h2>Replace the bold words or phrases</h2><p class="lead">Replace the bold idea with one exact vocabulary item from the Unit 3 glossary. Make any small grammatical adjustment needed.</p></div><div class="score-badge" id="score3">0 / 15 correct</div></div><div class="question-list" id="replaceList"></div><div class="controls"><button class="primary" onclick="checkReplace()">Check correct answers</button><button class="secondary" onclick="resetExercise(3)">Reset</button><span class="feedback" id="feedback3"></span></div></section>
+<section class="section" id="exercise4"><div class="section-head"><div><div class="eyebrow">Exercise 4</div><h2>Multiple choice – Check your understanding</h2><p class="lead">Choose the best answer, A, B, C, or D. Each question has one correct answer.</p></div><div class="score-badge" id="score4">0 / 15 correct</div></div><div class="question-list" id="mcqList"></div><div class="controls"><button class="primary" onclick="checkMCQ()">Check correct answers</button><button class="secondary" onclick="resetExercise(4)">Reset</button><span class="feedback" id="feedback4"></span></div></section></main><footer>FL248 · English for Tourism · Unit 3 – Accommodation · Interactive vocabulary practice</footer><a class="top-link" href="#top" aria-label="Back to top">↑</a>
+<script>
+const matchingTerms=['parador','self-catering accommodation','youth hostel','bed & breakfast (B&B)','guest house','country cottage','camp site','refuge','apartment hotel','holiday village','air conditioning','airport shuttle','baby-sitting service','high-speed Wi-Fi access','in-room minibar'];
+const matchingAnswers=['E','N','C','H','L','A','G','I','O','K','J','B','M','F','D'];
+const meanings=['a small house in a rural area used as holiday accommodation','a transport service that carries guests between an airport and a hotel','low-cost accommodation, often with shared rooms and facilities, especially for budget travellers','a small refrigerator in a hotel room containing drinks and snacks for guests','in Spain, a high-quality hotel often located in a historic building such as a palace, castle, fortress, or hunting lodge','fast wireless internet access provided to hotel guests','an area where travellers can stay in tents, caravans, or other camping accommodation','small-scale accommodation that provides a room and breakfast, often in a private or family-run property','basic accommodation in a remote or mountainous area, especially for walkers and mountaineers','a system that cools and controls the temperature of indoor air','a holiday complex offering accommodation together with leisure facilities and activities','a small lodging establishment that offers rooms to paying guests, usually with fewer services than a hotel','a hotel service in which someone looks after guests’ children for a period of time','accommodation where guests have cooking facilities and prepare their own meals','accommodation combining hotel services with apartment-style rooms that usually include a kitchen'];
+const wordBank=['maintenance','compensation','safe-deposit box','complaint','housekeeping','room rate','look into a problem','wheelchair access','overcharging','laundry and ironing service','defective equipment','hotel grading','apologize for the inconvenience','overbooking','hygiene'];
+const fillPrompts=['The guest asked whether the hotel offered a _____ to wash and press a business suit before the conference.','For security, passports, jewellery, and extra cash can be stored in the hotel’s _____.','The hotel improved _____ by installing ramps and wider entrances for guests who use wheelchairs.','Star classifications are part of a _____ system based on facilities, services, and other criteria.','The advertised _____ is 2,500,000 VND per night for a deluxe double room.','The receptionist listened carefully when the guest made a _____ about noise from the room next door.','Because of _____, the hotel had accepted more reservations than the number of rooms available.','The customer reported _____ after noticing that the final bill was higher than the agreed price.','The broken hairdryer and faulty bedside lamp were examples of _____ that needed to be replaced.','Regular _____ helps keep lifts, air conditioners, plumbing, and other hotel systems in good condition.','The _____ team cleans guest rooms, changes bed linen, and maintains room standards.','Good kitchen and bathroom _____ is essential for keeping hotel areas clean and helping prevent illness.','When a guest has been kept waiting for a room, staff should _____ before explaining the solution.','The duty manager promised to _____ and check why the wake-up call had not been made.','The hotel offered one free night as _____ for the serious inconvenience caused by the room problem.'];
+const fillAnswers=['laundry and ironing service','safe-deposit box','wheelchair access','hotel grading','room rate','complaint','overbooking','overcharging','defective equipment','maintenance','housekeeping','hygiene','apologize for the inconvenience','look into a problem','compensation'];
+const replacePrompts=['In Spain, the travellers stayed in a <strong>high-quality hotel located in a historic castle</strong>.','The family chose <strong>accommodation with cooking facilities where guests prepare their own meals</strong> for their week-long holiday.','Backpackers often choose a <strong>low-cost place with shared rooms and facilities</strong> to save money.','We booked a <strong>small place that provides a room and breakfast, often in a family-run property</strong> near the old town.','The hikers spent the night in <strong>basic accommodation in a remote mountain area</strong> before continuing their trek.','The resort offers a <strong>transport service carrying guests between the airport and the hotel</strong> every hour.','Business travellers particularly value <strong>fast wireless internet provided to hotel guests</strong> in their rooms.','Guests can buy cold drinks and snacks from the <strong>small refrigerator in the hotel room</strong>.','The hotel keeps guests’ passports and jewellery in a <strong>secure container for money, documents, and valuables</strong>.','The receptionist explained that the <strong>price charged for one hotel room for one night</strong> included breakfast.','The manager received a <strong>statement from a customer that something was unsatisfactory</strong> about the room cleanliness.','The hotel experienced <strong>accepting more room reservations than the number of rooms available</strong> during the holiday weekend.','A faulty television and broken kettle are examples of <strong>equipment that is damaged or not working correctly</strong>.','The front-desk agent said she would <strong>investigate the problem</strong> to find out what happened and how it could be solved.','The manager offered a free airport transfer as a <strong>benefit given to make up for serious inconvenience</strong>.'];
+const replaceAnswers=['parador','self-catering accommodation','youth hostel','bed & breakfast (B&B)','refuge','airport shuttle','high-speed Wi-Fi access','in-room minibar','safe-deposit box','room rate','complaint','overbooking','defective equipment','look into a problem','compensation'];
+const mcqs=[['Which type of accommodation is a small house in a rural area used for holidays?',['country cottage','holiday village','guest house','parador'],'A'],['Where can travellers normally stay in tents or caravans?',['refuge','camp site','apartment hotel','bed & breakfast'],'B'],['Which accommodation combines hotel services with apartment-style rooms that usually include a kitchen?',['youth hostel','guest house','apartment hotel','country cottage'],'C'],['A holiday complex that provides accommodation together with leisure facilities and activities is a:',['holiday village','parador','refuge','camp site'],'A'],['Which facility cools and controls the temperature of indoor air?',['high-speed Wi-Fi access','air conditioning','airport shuttle','in-room minibar'],'B'],['A service in which someone looks after guests’ children for a period of time is:',['housekeeping','baby-sitting service','laundry and ironing service','maintenance'],'B'],['Which hotel service washes and presses guests’ clothes?',['baby-sitting service','airport shuttle','laundry and ironing service','customer care'],'C'],['Facilities that allow people using wheelchairs to enter and move around a building are called:',['wheelchair access','hotel grading','safe-deposit box','housekeeping'],'A'],['A system for classifying hotels according to facilities, services, and other criteria is:',['room rate','hotel grading','overbooking','maintenance'],'B'],['Charging a guest more than the correct or agreed amount is:',['overbooking','compensation','overcharging','complaint'],'C'],['Work carried out to keep a building, room, or equipment in good condition and repair faults is:',['maintenance','hygiene','housekeeping','hotel grading'],'A'],['Which hotel department is responsible for cleaning guest rooms and maintaining room standards?',['maintenance','housekeeping','reception','baby-sitting service'],'B'],['Practices and conditions that keep places clean and help prevent illness or infection are called:',['hygiene','compensation','overcharging','hotel grading'],'A'],['To politely say sorry for trouble or difficulty caused to a customer means to:',['look into a problem','apologize for the inconvenience','offer overbooking','make a complaint'],'B'],['Money, a service, or another benefit offered to make up for serious inconvenience is:',['room rate','complaint','compensation','overcharging'],'C']];
+const sectionScores={1:0,2:0,3:0,4:0}; function normalize(v){return v.toLowerCase().trim().replace(/[’‘]/g,"'").replace(/[–—]/g,'-').replace(/\s+/g,' ')} function updateScores(s,n){sectionScores[s]=n;document.getElementById('score'+s).textContent=`${n} / 15 correct`;document.getElementById('feedback'+s).textContent=`${n} correct. Keep working on the unmarked items.`;document.getElementById('overallScore').textContent=`${Object.values(sectionScores).reduce((a,b)=>a+b,0)} / 60 correct`} function markRow(r,o){r.classList.toggle('correct',o)}
+meanings.forEach(x=>{let li=document.createElement('li');li.textContent=x;document.getElementById('meanings').appendChild(li)}); const matchingList=document.getElementById('matchingList');matchingTerms.forEach((term,i)=>{let row=document.createElement('div');row.className='qrow';row.innerHTML=`<div class="qtop"><span class="num">${i+1}</span><div><strong>${term}</strong><span class="tick">✓ Correct</span><select><option value="">Choose A–O</option>${'ABCDEFGHIJKLMNO'.split('').map(l=>`<option value="${l}">${l}</option>`).join('')}</select></div></div>`;matchingList.appendChild(row)});function checkMatching(){let s=0;matchingList.querySelectorAll('.qrow').forEach((r,i)=>{let o=r.querySelector('select').value===matchingAnswers[i];if(o)s++;markRow(r,o)});updateScores(1,s)}
+const wb=document.getElementById('wordBank');wordBank.forEach((w,i)=>{let x=document.createElement('span');x.className='chip';x.textContent=String.fromCharCode(97+i)+'. '+w;wb.appendChild(x)});const fillList=document.getElementById('fillList');fillPrompts.forEach((q,i)=>{let r=document.createElement('div');r.className='qrow';r.innerHTML=`<div class="qtop"><span class="num">${i+1}</span><div>${q}<span class="tick">✓ Correct</span><input type="text" autocomplete="off" spellcheck="false" placeholder="Type your answer here"></div></div>`;fillList.appendChild(r)});function checkFill(){let s=0;fillList.querySelectorAll('.qrow').forEach((r,i)=>{let o=normalize(r.querySelector('input').value)===normalize(fillAnswers[i]);if(o)s++;markRow(r,o)});updateScores(2,s)}
+const replaceList=document.getElementById('replaceList');replacePrompts.forEach((q,i)=>{let r=document.createElement('div');r.className='qrow';r.innerHTML=`<div class="qtop"><span class="num">${i+1}</span><div>${q}<span class="tick">✓ Correct</span><input type="text" autocomplete="off" spellcheck="false" placeholder="Replacement"></div></div>`;replaceList.appendChild(r)});function checkReplace(){let s=0;replaceList.querySelectorAll('.qrow').forEach((r,i)=>{let o=normalize(r.querySelector('input').value)===normalize(replaceAnswers[i]);if(o)s++;markRow(r,o)});updateScores(3,s)}
+const mcqList=document.getElementById('mcqList'),letters=['A','B','C','D'];mcqs.forEach((item,i)=>{let r=document.createElement('div');r.className='qrow';r.innerHTML=`<div class="qtop"><span class="num">${i+1}</span><div><strong>${item[0]}</strong><span class="tick">✓ Correct</span><div class="mcq-options">${item[1].map((o,j)=>`<label class="choice"><input type="radio" name="mcq${i}" value="${letters[j]}"><span><strong>${letters[j]}.</strong> ${o}</span></label>`).join('')}</div></div></div>`;mcqList.appendChild(r)});function checkMCQ(){let s=0;mcqList.querySelectorAll('.qrow').forEach((r,i)=>{r.querySelectorAll('.choice').forEach(c=>c.classList.remove('correct-choice'));let c=r.querySelector('input:checked'),o=c&&c.value===mcqs[i][2];if(o){s++;c.closest('.choice').classList.add('correct-choice')}markRow(r,!!o)});updateScores(4,s)}
+function resetExercise(n){let sec=document.getElementById('exercise'+n);sec.querySelectorAll('select').forEach(e=>e.value='');sec.querySelectorAll('input[type="text"]').forEach(e=>e.value='');sec.querySelectorAll('input[type="radio"]').forEach(e=>e.checked=false);sec.querySelectorAll('.qrow').forEach(e=>e.classList.remove('correct'));sec.querySelectorAll('.choice').forEach(e=>e.classList.remove('correct-choice'));sectionScores[n]=0;document.getElementById('score'+n).textContent='0 / 15 correct';document.getElementById('feedback'+n).textContent='';document.getElementById('overallScore').textContent=`${Object.values(sectionScores).reduce((a,b)=>a+b,0)} / 60 correct`}
+</script></body></html>
